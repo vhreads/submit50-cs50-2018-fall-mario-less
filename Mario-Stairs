@@ -1,0 +1,28 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int heigh, line, space, hash;
+
+int main(void)
+{  
+    do 
+    {
+        heigh = get_int ("Enter the hight of the pyramid: ");
+    }
+    while ( heigh <1 || heigh >8 );
+
+    for ( line = 0; line < heigh; line ++)
+    {
+        for ( space = 0; space < heigh - line - 1; space ++ )
+           {
+               printf (" ");
+           }
+
+           for ( hash = 0; hash<= line; hash ++)
+            {
+                printf ("#");
+            }
+        printf ("\n");
+    }
+    return 0;
+}
